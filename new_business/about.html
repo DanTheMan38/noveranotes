@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About Novera, an independent AI learning blog by Daniel focused on ChatGPT, Codex, OpenAI tools, and practical AI experiments."
+    />
+    <meta name="robots" content="index, follow" />
+    <title>About - Novera</title>
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("novera-theme");
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+            document.documentElement.dataset.theme = "dark";
+          }
+        } catch (error) {
+          return;
+        }
+      })();
+    </script>
+    <link rel="icon" href="assets/novera-icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Novera home">
+        <span class="logo-mark" aria-hidden="true">N</span>
+        <span class="brand-name">Novera</span>
+      </a>
+      <div class="header-actions">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          data-menu-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+          <a href="how-to-use-chatgpt-for-beginners.html">Start Here</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+            data-theme-toggle
+          >
+            <span class="theme-toggle-track" aria-hidden="true">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-toggle-text">Dark</span>
+          </button>
+        </nav>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+          data-theme-toggle
+        >
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-thumb"></span>
+          </span>
+          <span class="theme-toggle-text">Dark</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="page-hero">
+        <p class="eyebrow">About the site</p>
+        <h1>Learning AI clearly.</h1>
+        <p>
+          Novera is an independent blog by Daniel about using AI tools in practical,
+          everyday ways. The focus is on ChatGPT, Codex, prompts, experiments, and simple
+          guides that help readers understand what these tools can actually do.
+        </p>
+      </section>
+
+      <section class="content-section" aria-label="About Novera">
+        <div class="text-block">
+          <h2>What Novera Covers</h2>
+          <p>
+            This site is being built around first-hand learning. That means posts will come
+            from trying tools, building small projects, testing prompts, comparing workflows,
+            and writing down what was useful, confusing, surprising, or worth avoiding.
+          </p>
+          <p>
+            The goal is to make AI feel easier to understand for beginners, creators,
+            students, small business owners, and anyone who wants to use tools like ChatGPT
+            and Codex more confidently.
+          </p>
+        </div>
+
+        <div class="principle-grid compact-grid" aria-label="Site values">
+          <article>
+            <span>01</span>
+            <h3>Practical</h3>
+            <p>Guides should help readers do something useful, not just follow hype.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Independent</h3>
+            <p>Novera is not affiliated with OpenAI or any AI company.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Honest</h3>
+            <p>Posts will include limits, mistakes, and what did not work where useful.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="how-to-use-chatgpt-for-beginners.html">Start Here</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+      <p>
+        Novera is an independent learning blog and is not affiliated with OpenAI.
+        ChatGPT, Codex, and OpenAI names are used only to identify the tools being discussed.
+      </p>
+    </footer>
+    <script src="theme.js"></script>
+  </body>
+</html>
