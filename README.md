@@ -11,11 +11,12 @@ An independent AI learning blog about ChatGPT, Codex, OpenAI tools, prompts, and
 - Custom CSS logo mark
 - Animated AI signal-field hero visual
 - Site-wide light/dark mode toggle
+- Google Analytics tracking
 - Subtle independent-site disclaimer
 
 ## Next Build
 
 - Add more real article pages
-- Connect `noveranotes.com` to the GitHub Pages site
+- Keep `noveranotes.com` connected to the GitHub Pages site
 - Add sitemap entries only when pages exist
 - Keep the site focused on first-hand AI experiments and useful guides
