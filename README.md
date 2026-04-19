@@ -7,6 +7,7 @@ An independent AI learning blog about ChatGPT, Codex, OpenAI tools, prompts, and
 - Simple homepage only
 - About, Contact, and Privacy Policy pages
 - First article: How to Use ChatGPT for Beginners
+- Second article: What Is the IDE Context Button in Codex?
 - Novera SVG favicon
 - Custom CSS logo mark
 - Animated AI signal-field hero visual
