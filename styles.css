@@ -491,6 +491,60 @@ html[data-theme="dark"] .prompt-formula-figure .prompt-visual-card {
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
 }
 
+html[data-theme="dark"] .answer-card-visual {
+  background:
+    linear-gradient(135deg, rgba(255, 143, 130, 0.08), rgba(49, 213, 198, 0.09)),
+    rgba(7, 12, 23, 0.54);
+}
+
+html[data-theme="dark"] .answer-quality-figure {
+  border-color: rgba(226, 232, 240, 0.14);
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(10, 31, 36, 0.88)),
+    linear-gradient(120deg, rgba(255, 143, 130, 0.1), rgba(49, 213, 198, 0.08));
+}
+
+html[data-theme="dark"] .answer-quality-card {
+  border-color: rgba(226, 232, 240, 0.14);
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.94), rgba(12, 18, 31, 0.98)),
+    #0b1220;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+}
+
+html[data-theme="dark"] .answer-quality-row {
+  border-color: rgba(226, 232, 240, 0.12);
+  color: #e7edf8;
+}
+
+html[data-theme="dark"] .answer-quality-row span {
+  border: 1px solid rgba(226, 232, 240, 0.14);
+  background: rgba(7, 12, 23, 0.56);
+  color: #f8fbff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .weak-answer {
+  background: rgba(255, 143, 130, 0.1);
+}
+
+html[data-theme="dark"] .weak-answer span {
+  background: rgba(255, 143, 130, 0.16);
+}
+
+html[data-theme="dark"] .strong-answer {
+  background: rgba(49, 213, 198, 0.1);
+}
+
+html[data-theme="dark"] .strong-answer span {
+  background: rgba(49, 213, 198, 0.16);
+}
+
+html[data-theme="dark"] .answer-quality-arrow::before,
+html[data-theme="dark"] .answer-quality-arrow::after {
+  background: rgba(143, 180, 255, 0.72);
+}
+
 html[data-theme="dark"] .prompt-box,
 html[data-theme="dark"] .signal-note {
   border-color: rgba(49, 213, 198, 0.25);
@@ -502,6 +556,7 @@ html[data-theme="dark"] .signal-note,
 html[data-theme="dark"] .toc a,
 html[data-theme="dark"] .context-button-figure figcaption,
 html[data-theme="dark"] .prompt-formula-figure figcaption,
+html[data-theme="dark"] .answer-quality-figure figcaption,
 html[data-theme="dark"] .faq-list summary {
   color: #e7edf8;
 }
@@ -657,6 +712,7 @@ h1 {
 .intro,
 .latest-post-section {
   position: relative;
+  scroll-margin-top: 86px;
   padding: 76px 42px 86px;
   background:
     linear-gradient(180deg, #ffffff 0%, #f4fbfa 100%),
@@ -847,6 +903,13 @@ h1 {
     linear-gradient(135deg, #fff3dc 0%, #f8fcff 48%, #eaf8f6 100%),
     #fffaf1;
   border-color: rgba(255, 184, 77, 0.34);
+}
+
+.answer-card-visual {
+  background:
+    linear-gradient(135deg, #fff1ee 0%, #f8fcff 48%, #e7f8f6 100%),
+    #f8fcff;
+  border-color: rgba(255, 111, 97, 0.26);
 }
 
 .prompt-visual-card {
@@ -1066,6 +1129,7 @@ h1 {
   max-width: 940px;
   margin-bottom: 36px;
   font-size: clamp(3.2rem, 6vw, 5.6rem);
+  line-height: 1.06;
 }
 
 .article-deck {
@@ -1212,6 +1276,116 @@ h1 {
 }
 
 .prompt-formula-figure figcaption {
+  max-width: 420px;
+  margin: 0;
+  color: #39465a;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.answer-quality-figure {
+  display: inline-grid;
+  grid-template-columns: minmax(240px, 330px) minmax(220px, 1fr);
+  align-items: center;
+  gap: 18px;
+  max-width: 740px;
+  margin: 22px 0 0;
+  padding: 16px;
+  border: 1px solid rgba(255, 111, 97, 0.22);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, #fff1ee 0%, #ffffff 54%, #f1fbfa 100%),
+    #ffffff;
+}
+
+.answer-quality-card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 12px;
+  width: min(292px, calc(100% - 34px));
+  padding: 18px;
+  border: 1px solid rgba(10, 16, 32, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, #ffffff, #f8fbff),
+    #ffffff;
+  box-shadow: 0 16px 36px rgba(10, 16, 32, 0.16);
+}
+
+.answer-quality-figure .answer-quality-card {
+  width: 100%;
+}
+
+.answer-quality-label {
+  color: var(--blue);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.answer-quality-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  min-height: 56px;
+  padding: 10px;
+  border: 1px solid rgba(10, 16, 32, 0.1);
+  border-radius: 8px;
+  color: #263247;
+}
+
+.answer-quality-row span {
+  display: inline-grid;
+  place-items: center;
+  min-height: 30px;
+  padding: 6px 9px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.62);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.weak-answer {
+  background: rgba(255, 111, 97, 0.1);
+}
+
+.strong-answer {
+  background: rgba(29, 185, 171, 0.1);
+}
+
+.answer-quality-arrow {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 14px;
+}
+
+.answer-quality-arrow::before {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  left: 8px;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(45, 108, 223, 0.42);
+  content: "";
+}
+
+.answer-quality-arrow::after {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: rgba(45, 108, 223, 0.42);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  content: "";
+}
+
+.answer-quality-figure figcaption {
   max-width: 420px;
   margin: 0;
   color: #39465a;
@@ -1798,6 +1972,12 @@ h1 {
   }
 
   .prompt-formula-figure {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .answer-quality-figure {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 100%;
