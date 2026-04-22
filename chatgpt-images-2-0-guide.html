@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ChatGPT Images 2.0 explained in plain English, with real AI-generated examples, GPT Image 2 notes, practical prompts, editing tips, limitations, and beginner-friendly workflows."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="ChatGPT Images 2.0: The New AI Image Tool Explained" />
+    <meta
+      property="og:description"
+      content="A beginner-friendly guide to ChatGPT Images 2.0, what it can make, how it is different from older image models, and how to prompt it well."
+    />
+    <meta property="og:url" content="https://noveranotes.com/chatgpt-images-2-0-guide.html" />
+    <meta property="og:image" content="https://noveranotes.com/assets/gpt-image-2-creative-studio.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>ChatGPT Images 2.0: The New AI Image Tool Explained - Novera</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H085MWG83M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-H085MWG83M");
+    </script>
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("novera-theme");
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+            document.documentElement.dataset.theme = "dark";
+          }
+        } catch (error) {
+          return;
+        }
+      })();
+    </script>
+    <link rel="canonical" href="https://noveranotes.com/chatgpt-images-2-0-guide.html" />
+    <link rel="icon" href="assets/novera-icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "ChatGPT Images 2.0: The New AI Image Tool Explained",
+        "description": "A beginner-friendly guide to ChatGPT Images 2.0, GPT Image 2, AI image generation, editing, reference images, prompts, limitations, and examples.",
+        "datePublished": "2026-04-22",
+        "dateModified": "2026-04-22",
+        "author": {
+          "@type": "Person",
+          "name": "Daniel",
+          "url": "https://noveranotes.com/about.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Novera",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://noveranotes.com/assets/novera-icon.svg"
+          }
+        },
+        "image": "https://noveranotes.com/assets/gpt-image-2-creative-studio.jpg",
+        "keywords": [
+          "GPT Image 2",
+          "ChatGPT Images 2.0",
+          "AI image generation",
+          "OpenAI image model",
+          "AI image prompts",
+          "ChatGPT image editing"
+        ],
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://noveranotes.com/chatgpt-images-2-0-guide.html"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is the new ChatGPT image tool called ChatGPT Images 2.0?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. OpenAI's public product name is ChatGPT Images 2.0. The related OpenAI API model name in the developer docs is GPT Image 2. ChatGPT 2.0 by itself is not the official name of the whole ChatGPT product."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to upload a photo to use ChatGPT image generation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. You can generate new images from a text prompt. Upload a photo only when you want the tool to edit, preserve, or reference a specific real image."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can ChatGPT Images 2.0 make perfect text inside images?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Text rendering is much better than older image models, but it can still make mistakes. Always check spelling, placement, small text, and numbers before publishing."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Novera home">
+        <span class="logo-mark" aria-hidden="true">N</span>
+        <span class="brand-name">Novera</span>
+      </a>
+      <div class="header-actions">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          data-menu-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+          <a href="index.html#posts">Posts</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+            data-theme-toggle
+          >
+            <span class="theme-toggle-track" aria-hidden="true">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-toggle-text">Dark</span>
+          </button>
+        </nav>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+          data-theme-toggle
+        >
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-thumb"></span>
+          </span>
+          <span class="theme-toggle-text">Dark</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="article-shell">
+      <article class="article">
+        <header class="article-hero">
+          <p class="eyebrow">ChatGPT Images 2.0 / GPT Image 2</p>
+          <h1>ChatGPT Images 2.0: The New AI Image Tool Explained</h1>
+          <p class="article-deck">
+            The new image tool is not just "make me a picture." It can draft product shots,
+            posters, storyboards, UI ideas, realistic photos, style variations, and careful
+            edits from normal language. Here is the simple version, with examples made for this
+            guide.
+          </p>
+          <div class="article-meta" aria-label="Article details">
+            <span>By Daniel</span>
+            <span>Updated 22 April 2026</span>
+            <span>Beginner friendly</span>
+          </div>
+          <p class="article-home-link">
+            <a class="text-link" href="index.html">Back to the Novera homepage</a>
+          </p>
+          <figure class="article-hero-media">
+            <img
+              src="assets/gpt-image-2-creative-studio.jpg"
+              alt="AI creative studio scene with a laptop, generated image previews, sketches, color swatches, and a transparent cutout example"
+              width="1672"
+              height="941"
+              fetchpriority="high"
+            />
+            <figcaption>
+              Generated example: a friendly "AI creative studio" showing how one prompt can
+              become many kinds of visual output.
+            </figcaption>
+          </figure>
+        </header>
+
+        <section class="article-card quick-answer" aria-labelledby="quick-answer">
+          <h2 id="quick-answer">Quick Answer</h2>
+          <p>
+            <strong>ChatGPT Images 2.0</strong> is OpenAI's public product name for the new
+            image generation experience in ChatGPT. <strong>GPT Image 2</strong> is the
+            related model name used in the OpenAI API docs. "ChatGPT 2.0" by itself is not
+            the official name of the whole ChatGPT product.
+          </p>
+          <div class="mistake-grid">
+            <div>
+              <h3>What it does</h3>
+              <p>Turns plain text, reference images, and edit instructions into finished pictures.</p>
+            </div>
+            <div>
+              <h3>What is better</h3>
+              <p>Stronger prompt following, better text, better edits, and more natural results.</p>
+            </div>
+            <div>
+              <h3>What to upload</h3>
+              <p>No photo needed for new images. Upload one only when you need a real edit or reference.</p>
+            </div>
+            <div>
+              <h3>What to check</h3>
+              <p>Spelling, faces, hands, numbers, logos, layout, and anything factual.</p>
+            </div>
+          </div>
+        </section>
+
+        <nav class="toc article-card" aria-label="Table of contents">
+          <h2>In This Guide</h2>
+          <a href="#what">What it is</a>
+          <a href="#examples">Examples</a>
+          <a href="#different">What changed</a>
+          <a href="#use">How to use it well</a>
+          <a href="#editing">Editing and references</a>
+          <a href="#limits">Limits</a>
+          <a href="#prompts">Prompts to try</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <section class="article-section" id="what">
+          <h2>What Is ChatGPT Images 2.0?</h2>
+          <p>
+            ChatGPT Images 2.0 is OpenAI's public name for the newer image generation
+            experience in ChatGPT. GPT Image 2 is the related model name used in the OpenAI
+            API docs for developers.
+          </p>
+          <p>
+            The simplest way to think about it: it is like having a junior designer, photo
+            editor, illustrator, and moodboard maker inside the chat. The human still chooses
+            the taste and direction. The model handles the first draft, the variations, and the
+            repetitive visual changes much faster than doing everything by hand.
+          </p>
+          <div class="signal-note">
+            Good mental model: do not ask for "a nice image." Ask for the job the image must do.
+            A product ad, a lesson poster, a menu photo, a storybook panel, a website hero, and
+            a sticker sheet all need different instructions.
+          </div>
+        </section>
+
+        <section class="article-section" id="examples">
+          <h2>What Can It Make?</h2>
+          <p>
+            The examples below were generated for this guide. They show the range: text on
+            packaging, infographics, detailed educational posters, recurring characters,
+            natural photography, surreal world-building, UI mockups, and style control.
+          </p>
+          <div class="image-demo-grid">
+            <figure class="image-demo">
+              <img
+                src="assets/gpt-image-2-product-text.jpg"
+                alt="Generated product photo of a fictional Novera Lemon Tea can with readable label text"
+                width="1448"
+                height="1086"
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Product mockups with readable text.</strong> Useful for testing labels,
+                packaging, campaign ideas, and e-commerce directions before you pay for a shoot.
+              </figcaption>
+            </figure>
+            <figure class="image-demo">
+              <img
+                src="assets/gpt-image-2-infographic.jpg"
+                alt="Generated infographic titled Prompt to Picture with four steps: Ask, Make, Edit, Share"
+                width="1448"
+                height="1086"
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Simple infographics.</strong> Better text rendering makes posters and
+                step-by-step visuals more usable, but you should still proofread every word.
+              </figcaption>
+            </figure>
+            <figure class="image-demo image-demo-wide text-heavy-poster">
+              <img
+                src="assets/chatgpt-images-2-land-animals-poster.png"
+                alt="Generated educational poster about land animals with animal images, headings, labels, and detailed text descriptions"
+                width="1024"
+                height="1536"
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Detailed educational posters.</strong> This is the big leap: it can
+                build poster-style layouts with many sections, images, labels, and descriptions.
+                Treat dense text as a strong first draft and proofread it before publishing.
+              </figcaption>
+            </figure>
+            <figure class="image-demo">
+              <img
+                src="assets/gpt-image-2-storyboard.jpg"
+                alt="Generated four-panel storyboard showing the same young inventor character in different scenes"
+                width="1254"
+                height="1254"
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Storyboards and repeated characters.</strong> It can keep a character
+                surprisingly consistent across panels when you describe the key features clearly.
+              </figcaption>
+            </figure>
+            <figure class="image-demo">
+              <img
+                src="assets/gpt-image-2-bakery-photo.jpg"
+                alt="Generated realistic bakery photo with hands arranging croissants on trays at sunrise"
+                width="1448"
+                height="1086"
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Natural-looking photos.</strong> It can create believable lighting,
+                food texture, messy counters, and less "plastic" scenes than older models.
+              </figcaption>
+            </figure>
+            <figure class="image-demo">
+              <img
+                src="assets/gpt-image-2-office-city.jpg"
+                alt="Generated miniature city built from paperclips, pencils, binder clips, sticky notes, and office supplies"
+                width="1448"
+                height="1086"
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Wild creative transformations.</strong> This is where it becomes fun:
+                ordinary objects can turn into little worlds, props, sets, and visual metaphors.
+              </figcaption>
+            </figure>
+            <figure class="image-demo">
+              <img
+                src="assets/gpt-image-2-ui-mockup.jpg"
+                alt="Generated tablet UI mockup for a fictional AI image planning app with Prompt, Style, Edit, and Export labels"
+                width="1448"
+                height="1086"
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Interface mockups.</strong> It can help you explore product screens,
+                ad layouts, dashboards, and app concepts before opening design software.
+              </figcaption>
+            </figure>
+            <figure class="image-demo image-demo-wide">
+              <img
+                src="assets/gpt-image-2-style-grid.jpg"
+                alt="Generated comparison grid showing the same teal vase and coral flower in four visual styles"
+                width="1254"
+                height="1254"
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Style exploration.</strong> Ask for the same object in multiple styles:
+                photo, watercolor, 3D render, flat poster, editorial, cinematic, and more.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="article-section" id="different">
+          <h2>What Is Different From the Older ChatGPT Image Model?</h2>
+          <p>
+            The big change is reliability. Older image models were impressive, but they often
+            did "vibes first, instructions second." The newer image tools are much better at
+            following detailed instructions, preserving important parts of an input image, and
+            producing pictures that need fewer retries.
+          </p>
+          <div class="comparison-table-wrap">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Capability</th>
+                  <th>Older image tools often did this</th>
+                  <th>ChatGPT Images 2.0 / GPT Image 2 does this better</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Prompt following</td>
+                  <td>Got the main idea, then ignored a few small rules.</td>
+                  <td>Follows longer prompts and specific constraints more reliably.</td>
+                </tr>
+                <tr>
+                  <td>Text in images</td>
+                  <td>Made signs, labels, and posters with strange spelling.</td>
+                  <td>Handles readable labels and short poster text much better.</td>
+                </tr>
+                <tr>
+                  <td>Editing</td>
+                  <td>Changed too much when you only wanted one fix.</td>
+                  <td>Can preserve lighting, composition, likeness, and key details more carefully.</td>
+                </tr>
+                <tr>
+                  <td>Reference images</td>
+                  <td>Used references loosely and sometimes lost the important thing.</td>
+                  <td>Can use image inputs at high fidelity, especially useful for product and brand work.</td>
+                </tr>
+                <tr>
+                  <td>Natural results</td>
+                  <td>Sometimes looked glossy, fake, or too smooth.</td>
+                  <td>Can make more believable photos, textures, lighting, and everyday scenes.</td>
+                </tr>
+                <tr>
+                  <td>Workflow</td>
+                  <td>Mostly felt like one big attempt.</td>
+                  <td>Works better as a conversation: make, review, edit, refine, export.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="article-section" id="use">
+          <h2>How to Use It to Its Fullest</h2>
+          <p>
+            The secret is not fancy wording. The secret is giving the model the same information
+            a designer would ask you for before starting.
+          </p>
+          <div class="formula-grid">
+            <div>
+              <span>01</span>
+              <h3>Use</h3>
+              <p>Say where the image will live: blog hero, poster, product ad, thumbnail, menu, flyer, app mockup.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <h3>Subject</h3>
+              <p>Name the main thing clearly. One product, one room, one person, one scene, or one diagram.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <h3>Style</h3>
+              <p>Choose the medium: photo, 3D render, watercolor, editorial illustration, infographic, realistic UI.</p>
+            </div>
+            <div>
+              <span>04</span>
+              <h3>Rules</h3>
+              <p>Add must-have details, exact text, size, colors, and what to avoid.</p>
+            </div>
+          </div>
+
+          <div class="prompt-recipe">
+            <h3>A Strong Beginner Prompt</h3>
+            <p>
+              Create a landscape blog hero image for an article about small businesses using AI.
+              Show a friendly desk scene with a laptop, a notebook, product samples, and social
+              media drafts. Style: realistic editorial photography. Mood: bright, practical,
+              not futuristic. Colors: white, teal, blue, amber, and coral. Leave clean space near
+              the top left for the headline. No logos, no fake brand names, no watermark.
+            </p>
+          </div>
+
+          <h3>The Better Way to Iterate</h3>
+          <p>
+            Do not regenerate blindly ten times. Treat it like a conversation. Give one change at
+            a time, and tell it what must stay the same.
+          </p>
+          <div class="example-list">
+            <article>
+              <h3>Make One Change</h3>
+              <p>Keep the same composition, but make the lighting warmer and the background less busy.</p>
+            </article>
+            <article>
+              <h3>Protect the Good Parts</h3>
+              <p>Keep the product label, camera angle, and colors. Only change the table surface to dark wood.</p>
+            </article>
+            <article>
+              <h3>Ask for Variations</h3>
+              <p>Create three versions: one minimal, one playful, and one premium. Keep the same subject.</p>
+            </article>
+            <article>
+              <h3>Finish Like a Pro</h3>
+              <p>Now make it cleaner for publication: fewer background objects, sharper edges, and better spacing.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="article-section" id="editing">
+          <h2>Editing, Reference Images, and When You Should Upload a Photo</h2>
+          <p>
+            You do not need to upload a photo when you are creating a brand-new image from an
+            idea. A text prompt is enough. Upload a photo when you want ChatGPT to change,
+            preserve, or reference something real.
+          </p>
+          <div class="mistake-grid">
+            <div>
+              <h3>Upload a photo when...</h3>
+              <p>You want to edit your room, product, outfit, menu, logo draft, website screenshot, or existing ad.</p>
+            </div>
+            <div>
+              <h3>Do not upload when...</h3>
+              <p>You only need a new concept, moodboard, fictional product, illustration, poster, or thumbnail.</p>
+            </div>
+            <div>
+              <h3>Use a reference when...</h3>
+              <p>You want the style, object, face, pose, product shape, or colors to stay close to a source image.</p>
+            </div>
+            <div>
+              <h3>Use a selected area when...</h3>
+              <p>You want only one part changed, like the sky, a background, a sign, or an object on a table.</p>
+            </div>
+          </div>
+          <div class="prompt-recipe">
+            <h3>Editing Prompt Template</h3>
+            <p>
+              Edit this image. Change only [the exact part]. Keep [the parts that must not
+              change] exactly the same. Match the same lighting, camera angle, shadows, and
+              texture. Do not add logos, extra objects, or extra text.
+            </p>
+          </div>
+        </section>
+
+        <section class="article-section" id="limits">
+          <h2>What It Still Gets Wrong</h2>
+          <p>
+            This is the part people skip, then they wonder why a poster has one weird letter in
+            the corner. The tool is powerful, but it is not magic and it is not a fact checker.
+          </p>
+          <div class="mistake-grid">
+            <div>
+              <h3>Text Can Still Break</h3>
+              <p>Short labels are much better. Long paragraphs, tiny text, and exact spacing still need checking.</p>
+            </div>
+            <div>
+              <h3>Layout Is Not Perfect</h3>
+              <p>It can misplace objects if you ask for a very strict diagram or exact design grid.</p>
+            </div>
+            <div>
+              <h3>Consistency Can Drift</h3>
+              <p>A character, product, or logo can slowly change across many generations unless you use references.</p>
+            </div>
+            <div>
+              <h3>Facts Need Humans</h3>
+              <p>Maps, medical diagrams, historical scenes, labels, quantities, and technical details need verification.</p>
+            </div>
+            <div>
+              <h3>Some Requests Are Blocked</h3>
+              <p>Prompts and outputs are filtered by safety systems, so some content cannot be generated.</p>
+            </div>
+            <div>
+              <h3>Transparent Backgrounds</h3>
+              <p>The official GPT Image 2 docs say transparent background requests are not currently supported.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-section" id="prompts">
+          <h2>Fun Prompts to Try</h2>
+          <p>
+            Use these as starting points. Replace the bracketed parts with your own business,
+            hobby, product, or idea.
+          </p>
+          <div class="example-list">
+            <article>
+              <h3>Product Ad</h3>
+              <p>
+                Create a premium product photo for [product]. Show it on a clean studio surface
+                with realistic shadows, condensation, and one prop that explains the flavor.
+                No logos except the fictional label text: "[exact text]".
+              </p>
+            </article>
+            <article>
+              <h3>Mini Poster</h3>
+              <p>
+                Create a beginner-friendly poster explaining [topic] in four steps. Use large,
+                readable headings only. Keep the design simple, bright, and easy to scan.
+              </p>
+            </article>
+            <article>
+              <h3>Room Makeover</h3>
+              <p>
+                Edit this room photo into a calm modern workspace. Keep the walls, windows, and
+                camera angle the same. Change only the furniture, lighting, and small decor.
+              </p>
+            </article>
+            <article>
+              <h3>Character Sheet</h3>
+              <p>
+                Create a four-panel character sheet for an original [character type]. Keep the
+                face, outfit, colors, and accessories consistent in every panel.
+              </p>
+            </article>
+            <article>
+              <h3>Style Test</h3>
+              <p>
+                Show the same [object] in four styles: photoreal product photo, watercolor,
+                clay 3D render, and flat editorial poster. Keep the object shape consistent.
+              </p>
+            </article>
+            <article>
+              <h3>Website Hero</h3>
+              <p>
+                Create a wide website hero image for [page topic]. Leave clean space for a
+                headline, use natural lighting, and avoid fake text, logos, and clutter.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="article-section" id="faq">
+          <h2>FAQ</h2>
+          <div class="faq-list">
+            <details>
+              <summary>Is ChatGPT 2.0 the real name?</summary>
+              <p>
+                Close, but the important word is "Images." OpenAI's public product name is
+                ChatGPT Images 2.0. The API model name in the developer docs is GPT Image 2.
+                "ChatGPT 2.0" by itself can sound like a whole new ChatGPT version, not the
+                image generation feature.
+              </p>
+            </details>
+            <details>
+              <summary>Can it edit my own photos?</summary>
+              <p>
+                Yes, if you provide the photo and clearly explain what should change and what
+                must stay the same. For precise edits, reference images and masks help.
+              </p>
+            </details>
+            <details>
+              <summary>Can it make logos?</summary>
+              <p>
+                It can explore logo ideas and visual directions, but final logos should still be
+                cleaned up in vector design software and checked for trademark issues.
+              </p>
+            </details>
+            <details>
+              <summary>Can I trust text inside the image?</summary>
+              <p>
+                Trust it only after checking. Text is much better than it used to be, especially
+                short labels, but spelling and tiny typography can still go wrong.
+              </p>
+            </details>
+            <details>
+              <summary>What should I avoid uploading?</summary>
+              <p>
+                Avoid sensitive documents, private customer data, images of people without
+                permission, confidential business material, and anything you would not want
+                processed by an online service.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <section class="article-card sources-card" aria-labelledby="read-next">
+          <h2 id="read-next">Read Next</h2>
+          <ul>
+            <li><a href="chatgpt-projects-vs-memory-vs-custom-instructions.html">ChatGPT Projects vs Memory</a></li>
+            <li><a href="chatgpt-prompts-for-small-business-owners.html">ChatGPT Prompts for Small Business Owners</a></li>
+            <li><a href="how-to-use-chatgpt-for-beginners.html">How to Use ChatGPT for Beginners</a></li>
+          </ul>
+        </section>
+
+        <section class="article-card sources-card" aria-labelledby="sources">
+          <h2 id="sources">Sources Checked</h2>
+          <p>
+            This guide was written from first-hand testing and checked against current official
+            OpenAI pages on 22 April 2026.
+          </p>
+          <ul>
+            <li><a href="https://developers.openai.com/api/docs/models/gpt-image-2">OpenAI API Docs: GPT Image 2 model</a></li>
+            <li><a href="https://developers.openai.com/api/docs/guides/image-generation">OpenAI API Docs: Image generation guide</a></li>
+            <li><a href="https://developers.openai.com/api/docs/models/gpt-image-1.5">OpenAI API Docs: GPT Image 1.5 model</a></li>
+            <li><a href="https://openai.com/index/introducing-chatgpt-images-2-0/">OpenAI: Introducing ChatGPT Images 2.0</a></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#posts">Posts</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+      <p>
+        Novera is an independent learning blog and is not affiliated with OpenAI.
+        ChatGPT, Codex, and OpenAI names are used only to identify the tools being discussed.
+      </p>
+    </footer>
+    <script src="theme.js"></script>
+  </body>
+</html>
