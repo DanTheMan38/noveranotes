@@ -1386,6 +1386,18 @@ h1 {
 
 .compact-screenshot {
   max-width: 360px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.small-screenshot {
+  max-width: 440px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.small-screenshot .screenshot-frame img {
+  width: min(313px, 100%);
 }
 
 .screenshot-frame {
