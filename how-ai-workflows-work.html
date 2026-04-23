@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A fun, beginner-friendly guide to AI workflows, prompt chaining, and agents, explained with an interactive marble run, dominoes, tool handoffs, and review."
+    />
+    <meta name="robots" content="index, follow" />
+    <title>How AI Workflows Work: A Marble Run Demo for Beginners - Novera</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H085MWG83M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-H085MWG83M");
+    </script>
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("novera-theme");
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+            document.documentElement.dataset.theme = "dark";
+          }
+        } catch (error) {
+          return;
+        }
+      })();
+    </script>
+    <link rel="canonical" href="https://noveranotes.com/how-ai-workflows-work.html" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106690066329436"
+      crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/novera-icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How AI Workflows Work: A Marble Run Demo for Beginners",
+        "description": "A playful beginner guide to AI workflows, prompt chaining, tool use, and agent-like systems explained through an interactive marble run analogy.",
+        "datePublished": "2026-04-23",
+        "dateModified": "2026-04-23",
+        "author": {
+          "@type": "Person",
+          "name": "Daniel",
+          "url": "https://noveranotes.com/about.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Novera",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://noveranotes.com/assets/novera-icon.svg"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://noveranotes.com/how-ai-workflows-work.html"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Novera home">
+        <span class="logo-mark" aria-hidden="true">N</span>
+        <span class="brand-name">Novera</span>
+      </a>
+      <div class="header-actions">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          data-menu-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+          <a href="index.html#posts">Posts</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+            data-theme-toggle
+          >
+            <span class="theme-toggle-track" aria-hidden="true">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-toggle-text">Dark</span>
+          </button>
+        </nav>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+          data-theme-toggle
+        >
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-thumb"></span>
+          </span>
+          <span class="theme-toggle-text">Dark</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="article-shell">
+      <article class="article">
+        <header class="article-hero">
+          <p class="eyebrow">AI workflows explained</p>
+          <h1>How AI Workflows Work: A Marble Run Demo for Beginners</h1>
+          <p class="article-deck">
+            AI workflows make more sense when you can see one step trigger the next. This
+            page uses a playful marble run, domino chain, and toy-car handoff to explain
+            automation, prompt chaining, tools, checks, and the final result in plain English.
+          </p>
+          <div class="article-meta" aria-label="Article details">
+            <span>By Daniel</span>
+            <span>Updated 23 April 2026</span>
+            <span>Interactive explainer</span>
+          </div>
+        </header>
+
+        <section class="article-card quick-answer" id="quick-answer" aria-labelledby="quick-answer-title">
+          <h2 id="quick-answer-title">Quick Answer</h2>
+          <p>
+            An AI workflow is a chain of steps where one result triggers the next. In the same
+            way a marble can roll down a track, hit dominoes, and set another toy in motion,
+            a workflow can move from a task to a prompt, to a tool, to a check, to a final
+            answer or action without you manually doing every handoff yourself.
+          </p>
+          <div class="signal-note">
+            <strong>Simple idea:</strong> the marble is the task, the rails are the structure,
+            the dominoes are triggers, and the finish is the output you actually wanted.
+          </div>
+        </section>
+
+        <section class="article-card workflow-lab" id="demo" aria-labelledby="workflow-demo-title">
+          <div class="workflow-lab-header">
+            <div>
+              <p class="eyebrow">Interactive demo</p>
+              <h2 id="workflow-demo-title">Drop the Marble</h2>
+              <p>
+                Press start and watch one request move through planning, model work,
+                tool triggers, review, and a polished finish.
+              </p>
+            </div>
+            <div class="workflow-controls">
+              <button class="workflow-button primary" type="button" data-start-workflow>
+                Start the workflow
+              </button>
+              <button class="workflow-button secondary" type="button" data-reset-workflow>
+                Reset
+              </button>
+            </div>
+          </div>
+
+          <div class="workflow-machine-shell" data-workflow-demo>
+            <canvas
+              class="workflow-machine-canvas"
+              width="1200"
+              height="740"
+              aria-hidden="true"
+              data-workflow-canvas
+            ></canvas>
+          </div>
+
+          <div class="workflow-status" aria-live="polite">
+            <span class="workflow-status-label">Now happening</span>
+            <strong data-workflow-status>Ready to drop the marble.</strong>
+            <span data-workflow-caption>
+              One clear task enters the system, then each part of the setup passes useful work
+              to the next part.
+            </span>
+          </div>
+
+          <div class="workflow-progress" aria-hidden="true">
+            <span data-workflow-progress></span>
+          </div>
+
+          <div class="workflow-step-grid" aria-label="Workflow stages">
+            <article class="workflow-step-card" data-workflow-step="0">
+              <span class="workflow-step-number">01</span>
+              <h3>Task enters</h3>
+              <p>A real job arrives: a question, bug report, customer message, or content brief.</p>
+            </article>
+            <article class="workflow-step-card" data-workflow-step="1">
+              <span class="workflow-step-number">02</span>
+              <h3>Prompt shapes it</h3>
+              <p>The rails keep the request moving in the right direction instead of going vague.</p>
+            </article>
+            <article class="workflow-step-card" data-workflow-step="2">
+              <span class="workflow-step-number">03</span>
+              <h3>Model does the work</h3>
+              <p>The spiral represents drafting, transforming, classifying, reasoning, or summarising.</p>
+            </article>
+            <article class="workflow-step-card" data-workflow-step="3">
+              <span class="workflow-step-number">04</span>
+              <h3>Tools and checks trigger</h3>
+              <p>Dominoes represent search, formatting, validation, routing, or approval steps firing in order.</p>
+            </article>
+            <article class="workflow-step-card" data-workflow-step="4">
+              <span class="workflow-step-number">05</span>
+              <h3>Result reaches the finish</h3>
+              <p>The toy-car handoff stands for delivering the answer, taking an action, or sending work onward.</p>
+            </article>
+          </div>
+
+          <div class="prompt-box">
+            <p>
+              <strong>Honest note:</strong> real workflows can branch, retry, wait for
+              approval, or stop when something looks wrong. This demo keeps it linear on
+              purpose so the core idea is easy to understand.
+            </p>
+          </div>
+        </section>
+
+        <nav class="toc article-card" aria-label="Table of contents">
+          <h2>In This Guide</h2>
+          <a href="#demo">Try the interactive demo</a>
+          <a href="#meaning">What each toy means</a>
+          <a href="#why-it-helps">Why workflows help</a>
+          <a href="#prompt-chaining">Prompt chaining vs agents</a>
+          <a href="#when-to-use">When to use a workflow</a>
+          <a href="#examples">Real examples</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <section class="article-section" id="meaning">
+          <h2>What Each Part of the Marble Run Means</h2>
+          <p>
+            The point of the toy system is not the toy itself. The point is to make an
+            invisible process visible. If someone searches for terms like
+            <em>AI workflow</em>, <em>prompt chaining</em>, or <em>how AI agents work</em>,
+            this is the basic idea they usually need to understand first.
+          </p>
+
+          <div class="workflow-map-grid">
+            <article>
+              <span>Drop</span>
+              <h3>The Marble</h3>
+              <p>
+                The marble is the starting task. It might be a customer question, a research
+                request, a messy draft, or a bug report that needs attention.
+              </p>
+            </article>
+            <article>
+              <span>Guide</span>
+              <h3>The Track</h3>
+              <p>
+                The track is the workflow structure. It decides what happens first, what
+                happens next, and what should not happen at all.
+              </p>
+            </article>
+            <article>
+              <span>Think</span>
+              <h3>The Spiral</h3>
+              <p>
+                The spiral represents model work: turning rough input into a plan, summary,
+                draft, classification, or recommendation.
+              </p>
+            </article>
+            <article>
+              <span>Trigger</span>
+              <h3>The Dominoes</h3>
+              <p>
+                Dominoes stand for tool calls and checks. One good output can trigger search,
+                a database lookup, a formatting pass, or a human review step.
+              </p>
+            </article>
+            <article>
+              <span>Deliver</span>
+              <h3>The Toy Car</h3>
+              <p>
+                The toy-car handoff is the final movement toward action: publish the post,
+                send the reply, update the ticket, or show the answer to a person.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="article-section" id="why-it-helps">
+          <h2>Why This Analogy Helps</h2>
+          <p>
+            People often hear words like automation, orchestration, or agent and picture
+            something mysterious. A marble run makes it much simpler. One thing hits the next
+            thing, which hits the next thing, until the outcome appears.
+          </p>
+
+          <div class="workflow-benefit-grid">
+            <article>
+              <span>01</span>
+              <h3>It shows repeatability</h3>
+              <p>
+                A good workflow is not random. If the setup is solid, the same kind of task
+                can move through the same useful checks every time.
+              </p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>It lowers mental load</h3>
+              <p>
+                Instead of remembering every tiny step yourself, you decide the path once and
+                let the system carry the task through the obvious handoffs.
+              </p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>It makes weak spots visible</h3>
+              <p>
+                If the finish is bad, you can inspect the track. Maybe the prompt is weak.
+                Maybe the search step is missing. Maybe a review domino should exist.
+              </p>
+            </article>
+          </div>
+
+          <div class="prompt-recipe">
+            <p>
+              <strong>Useful design questions:</strong> What starts the flow? What tool is
+              truly needed? What should be checked before the finish? Where should a human
+              still decide?
+            </p>
+          </div>
+
+          <div class="signal-note">
+            <strong>Search is only one station:</strong> if a task depends on current facts,
+            a workflow can include a search step. If the task does not need fresh facts, you
+            do not need to add search just because it sounds advanced.
+          </div>
+        </section>
+
+        <section class="article-section" id="prompt-chaining">
+          <h2>Single Prompt vs Prompt Chain vs Agent-Like Workflow</h2>
+          <p>
+            These terms are related, but they are not identical. The easiest way to think
+            about them is in layers: one answer, many ordered steps, or a system that can
+            choose what to do next.
+          </p>
+
+          <div class="comparison-table-wrap">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Approach</th>
+                  <th>What it does</th>
+                  <th>Best for</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Single prompt</td>
+                  <td>One request goes in and one answer comes back.</td>
+                  <td>Simple questions, quick drafts, easy summaries, and low-stakes tasks.</td>
+                </tr>
+                <tr>
+                  <td>Prompt chain</td>
+                  <td>One step feeds the next step in a fixed order.</td>
+                  <td>Repeatable tasks where planning, drafting, checking, and formatting each deserve their own turn.</td>
+                </tr>
+                <tr>
+                  <td>Agent-like workflow</td>
+                  <td>The system can choose tools, inspect results, retry, or branch before finishing.</td>
+                  <td>Messier jobs such as research, debugging, triage, and multi-step automation with tool use.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            The marble run on this page is closer to prompt chaining with one extra idea:
+            tool handoffs. It is not pretending that real systems are always linear. It is
+            showing the core logic in a way that is easy to grasp.
+          </p>
+        </section>
+
+        <section class="article-section" id="when-to-use">
+          <h2>When to Use a Workflow and When to Keep It Simple</h2>
+          <div class="workflow-use-grid">
+            <article>
+              <span>Use it when</span>
+              <h3>The task repeats</h3>
+              <ul>
+                <li>You do the same process over and over.</li>
+                <li>You need current information, a lookup, or a tool call.</li>
+                <li>You want the same checks to happen every time.</li>
+                <li>You need a final handoff to a person, system, or publish step.</li>
+              </ul>
+            </article>
+            <article>
+              <span>Skip it when</span>
+              <h3>One prompt is enough</h3>
+              <ul>
+                <li>The answer is simple and fast already.</li>
+                <li>The chain would be slower than just doing the task.</li>
+                <li>No tool use, verification, or handoff is actually needed.</li>
+                <li>The process is still too fuzzy to automate cleanly.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="article-section" id="examples">
+          <h2>Four Real Examples of AI Workflows</h2>
+          <p>
+            Once the analogy clicks, the practical use cases become much easier to picture.
+          </p>
+
+          <div class="example-list">
+            <article>
+              <h3>1. Research Workflow</h3>
+              <p>
+                A question enters. The model turns it into a plan. Search fetches fresh
+                information. A check step removes weak claims. The final answer comes back
+                with better structure and fewer guesses.
+              </p>
+            </article>
+            <article>
+              <h3>2. Content Workflow</h3>
+              <p>
+                A topic brief becomes an outline, then a draft, then an edit pass, then a
+                final review. Each stage improves one part of the post instead of trying to
+                do everything in one huge prompt.
+              </p>
+            </article>
+            <article>
+              <h3>3. Support Reply Workflow</h3>
+              <p>
+                A customer message gets classified, matched to policy, drafted into a reply,
+                and checked for tone before a human approves the final send.
+              </p>
+            </article>
+            <article>
+              <h3>4. Coding Workflow</h3>
+              <p>
+                A bug report leads to code inspection, test selection, a patch draft, a
+                verification pass, and then a final review before the fix is shipped.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="article-section" id="faq">
+          <h2>FAQ</h2>
+          <div class="faq-list">
+            <details>
+              <summary>What is an AI workflow in plain English?</summary>
+              <p>
+                It is a repeatable path for a task. Instead of asking a model for one big
+                answer and hoping it is enough, you break the work into clear stages that can
+                hand results to each other.
+              </p>
+            </details>
+            <details>
+              <summary>Is prompt chaining the same as an AI agent?</summary>
+              <p>
+                Not exactly. Prompt chaining usually means a fixed sequence of steps. An
+                agent-like system can often choose tools, re-check results, or decide what to
+                do next based on what it finds.
+              </p>
+            </details>
+            <details>
+              <summary>Why would a workflow include search?</summary>
+              <p>
+                Search is useful when the answer depends on current information, sources, or
+                verification. If the task is timeless or self-contained, search may add
+                friction without adding value.
+              </p>
+            </details>
+            <details>
+              <summary>Do all workflows need human review?</summary>
+              <p>
+                No, but many important ones benefit from it. If the task affects customers,
+                money, legal risk, safety, or publishing, a human approval step is often worth
+                keeping in the chain.
+              </p>
+            </details>
+            <details>
+              <summary>Why use a playful demo at all?</summary>
+              <p>
+                Because it turns an abstract idea into something people can instantly see.
+                When the motion is visible, the logic behind automation and tool handoffs
+                becomes easier to remember.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <section class="article-card sources-card" aria-labelledby="read-next">
+          <h2 id="read-next">Read Next</h2>
+          <ul>
+            <li><a href="how-to-use-chatgpt-for-beginners.html">How to Use ChatGPT for Beginners</a></li>
+            <li><a href="why-does-chatgpt-give-wrong-answers.html">Why Does ChatGPT Give Wrong Answers?</a></li>
+            <li><a href="codex-ide-context-button.html">What Is the IDE Context Button in Codex?</a></li>
+            <li><a href="chatgpt-projects-vs-memory-vs-custom-instructions.html">ChatGPT Projects vs Memory</a></li>
+          </ul>
+        </section>
+
+        <section class="article-card sources-card" aria-labelledby="sources">
+          <h2 id="sources">Sources Checked</h2>
+          <p>
+            This guide was written as a practical visual explainer and checked against
+            current official OpenAI and Google guidance on prompting, agent workflows, and
+            people-first publishing on 23 April 2026.
+          </p>
+          <ul>
+            <li><a href="https://openai.com/academy/prompting/">OpenAI Academy: Prompting fundamentals</a></li>
+            <li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/">OpenAI: A practical guide to building AI agents</a></li>
+            <li><a href="https://platform.openai.com/docs/guides/agent-builder">OpenAI API Docs: Agent Builder</a></li>
+            <li><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content">Google Search Central: Creating helpful, reliable, people-first content</a></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#posts">Posts</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+      <p>
+        Novera is an independent learning blog and is not affiliated with OpenAI.
+        ChatGPT, Codex, and OpenAI names are used only to identify the tools being discussed.
+      </p>
+    </footer>
+    <script src="theme.js"></script>
+    <script src="workflow-demo.js"></script>
+  </body>
+</html>
