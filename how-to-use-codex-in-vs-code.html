@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn how to use Codex in VS Code, Cursor, or Windsurf with IDE context, Chat vs Agent mode, Full Access safety, copy-paste prompts, and a safe first workflow."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to Use Codex in VS Code" />
+    <meta
+      property="og:description"
+      content="A practical Codex beginner guide covering IDE context, Chat vs Agent mode, Full Access, safe prompts, and how to review changes."
+    />
+    <meta property="og:url" content="https://noveranotes.com/how-to-use-codex-in-vs-code.html" />
+    <meta property="og:image" content="https://noveranotes.com/assets/codex-ide-guide-hero.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>How to Use Codex in VS Code: Chat vs Agent, IDE Context, and Full Access - Novera</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H085MWG83M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-H085MWG83M");
+    </script>
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("novera-theme");
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+            document.documentElement.dataset.theme = "dark";
+          }
+        } catch (error) {
+          return;
+        }
+      })();
+    </script>
+    <link rel="canonical" href="https://noveranotes.com/how-to-use-codex-in-vs-code.html" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106690066329436"
+      crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/novera-icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to Use Codex in VS Code: Chat vs Agent, IDE Context, and Full Access",
+        "description": "A practical beginner guide to using Codex in VS Code, Cursor, Windsurf, and similar editors, including IDE context, Chat vs Agent mode, Agent Full Access, prompts, and safe workflows.",
+        "datePublished": "2026-04-24",
+        "dateModified": "2026-04-24",
+        "author": {
+          "@type": "Person",
+          "name": "Daniel",
+          "url": "https://noveranotes.com/about.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Novera",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://noveranotes.com/assets/novera-icon.svg"
+          }
+        },
+        "image": "https://noveranotes.com/assets/codex-ide-guide-hero.png",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://noveranotes.com/how-to-use-codex-in-vs-code.html"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Novera home">
+        <span class="logo-mark" aria-hidden="true">N</span>
+        <span class="brand-name">Novera</span>
+      </a>
+      <div class="header-actions">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          data-menu-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+          <a href="index.html#posts">Posts</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+            data-theme-toggle
+          >
+            <span class="theme-toggle-track" aria-hidden="true">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-toggle-text">Dark</span>
+          </button>
+        </nav>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+          data-theme-toggle
+        >
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-thumb"></span>
+          </span>
+          <span class="theme-toggle-text">Dark</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="article-shell">
+      <article class="article">
+        <header class="article-hero">
+          <p class="eyebrow">Codex IDE guide</p>
+          <h1>How to Use Codex in VS Code: Chat vs Agent, IDE Context, and Full Access</h1>
+          <p class="article-deck">
+            If you are staring at Include IDE context, Chat, Agent, or Agent Full Access and
+            wondering what is safe to click, this guide is for you. IDE context affects what
+            Codex can see. The mode you choose affects what Codex can do.
+          </p>
+          <div class="article-meta" aria-label="Article details">
+            <span>By Daniel</span>
+            <span>Updated 24 April 2026</span>
+            <span>Codex, VS Code, Cursor, Windsurf</span>
+          </div>
+          <p class="article-home-link">
+            <a class="text-link" href="index.html">Back to the Novera homepage</a>
+          </p>
+          <figure class="article-hero-media">
+            <img
+              src="assets/codex-ide-guide-hero.png"
+              alt="AI-generated mockup of a coding assistant sidebar next to a code editor"
+              width="1672"
+              height="941"
+              loading="eager"
+            />
+            <figcaption>
+              AI-generated mockup. The real Codex interface may look different, but the
+              important idea is the same: context, mode, and permissions are separate choices.
+            </figcaption>
+          </figure>
+        </header>
+
+        <section class="article-card quick-answer" aria-labelledby="quick-answer">
+          <h2 id="quick-answer">Quick Answer</h2>
+          <p>
+            Codex is like a coding helper sitting next to your editor. You can ask it to
+            explain code, suggest changes, edit files, or run checks. The important part is
+            knowing which setting controls which kind of help.
+          </p>
+          <p>
+            Use <strong>Chat</strong> when you want advice or a plan. Use
+            <strong>Agent</strong> when you want Codex to make a small change. Save
+            <strong>Agent Full Access</strong> for work you already understand and trust.
+          </p>
+          <p>
+            If you only remember one thing, remember this: <strong>context is not permission</strong>.
+            Giving Codex better context does not mean you have to give it full access.
+          </p>
+        </section>
+
+        <section class="article-card simple-version" aria-labelledby="simple-version">
+          <h2 id="simple-version">Super Simple Version</h2>
+          <div class="simple-version-grid">
+            <div>
+              <span>1</span>
+              <h3>What Codex Can See</h3>
+              <p>
+                IDE context is like showing Codex the page you are looking at. It helps Codex
+                understand your question.
+              </p>
+            </div>
+            <div>
+              <span>2</span>
+              <h3>What Codex Can Do</h3>
+              <p>
+                Agent mode is when Codex can actually work on files and run useful checks in
+                your project.
+              </p>
+            </div>
+            <div>
+              <span>3</span>
+              <h3>When Codex Should Ask</h3>
+              <p>
+                Full Access reduces interruptions. That is powerful, so beginners should use
+                it only after they understand the task.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <nav class="toc article-card" aria-label="Table of contents">
+          <h2>In This Guide</h2>
+          <a href="#glossary">Tiny glossary</a>
+          <a href="#what-it-is">What Codex in VS Code is</a>
+          <a href="#setup">Quick setup</a>
+          <a href="#editor-context">How IDE context works</a>
+          <a href="#modes">Chat vs Agent vs Agent Full Access</a>
+          <a href="#safe-workflow">A safe first workflow</a>
+          <a href="#prompts">Prompts that work well</a>
+          <a href="#first-session">Copy this first session</a>
+          <a href="#troubleshooting">Troubleshooting</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <section class="article-section" id="glossary">
+          <h2>Tiny Glossary</h2>
+          <p>
+            If the words in Codex feel a bit technical, start here. These are the plain-English
+            meanings you need before using the rest of the guide.
+          </p>
+          <div class="glossary-grid">
+            <div>
+              <h3>IDE</h3>
+              <p>Your code editor, such as VS Code, Cursor, or Windsurf.</p>
+            </div>
+            <div>
+              <h3>Context</h3>
+              <p>The files, selected code, and editor state Codex can use to understand you.</p>
+            </div>
+            <div>
+              <h3>Diff</h3>
+              <p>The before-and-after view that shows exactly what Codex changed.</p>
+            </div>
+            <div>
+              <h3>Agent</h3>
+              <p>A mode where Codex can do work in your project instead of only chatting.</p>
+            </div>
+            <div>
+              <h3>Full Access</h3>
+              <p>A more powerful mode with fewer approval prompts. Use it carefully.</p>
+            </div>
+            <div>
+              <h3>Network Access</h3>
+              <p>Permission for commands to use the internet, such as downloading packages.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-section" id="what-it-is">
+          <h2>What Codex in VS Code Is</h2>
+          <p>
+            Codex is OpenAI's coding agent. In the IDE extension, it works beside your code
+            editor. That means you can ask questions about the current project without copying
+            and pasting whole files into a separate chat.
+          </p>
+          <p>
+            A normal Codex session might look like this: ask what a file does, ask for a plan,
+            let Codex make one small edit, then look at the diff to check what changed.
+          </p>
+          <p>
+            The name "VS Code" is the search term most people use, but the official Codex IDE
+            extension also supports VS Code forks like Cursor and Windsurf. OpenAI's docs also
+            mention Codex IDE integrations for VS Code-compatible editors and JetBrains IDEs
+            on macOS, Windows, and Linux.
+          </p>
+          <div class="formula-grid">
+            <div>
+              <span>01</span>
+              <h3>Ask Questions</h3>
+              <p>Use Codex like a project-aware reviewer when you need to understand a file.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <h3>Make Small Edits</h3>
+              <p>Let Codex change focused code paths, then inspect the diff before moving on.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <h3>Run Checks</h3>
+              <p>For suitable tasks, Codex can run commands such as tests or formatters.</p>
+            </div>
+            <div>
+              <span>04</span>
+              <h3>Delegate Larger Work</h3>
+              <p>For longer jobs, Codex can hand work to cloud tasks when your setup supports it.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-section" id="setup">
+          <h2>Quick Setup</h2>
+          <p>
+            The basic setup is short. Install the Codex extension, sign in, open your project,
+            and start with a low-risk question before asking Codex to edit anything.
+          </p>
+          <div class="mistake-grid">
+            <div>
+              <h3>1. Install the Extension</h3>
+              <p>
+                Use the Codex extension for VS Code, Cursor, Windsurf, or another supported
+                editor. Restart the editor if Codex does not appear right away.
+              </p>
+            </div>
+            <div>
+              <h3>2. Open the Project Folder</h3>
+              <p>
+                Open the actual folder you want Codex to understand. A single focused
+                workspace is easier for Codex to reason about than a messy editor state.
+              </p>
+            </div>
+            <div>
+              <h3>3. Start in Chat</h3>
+              <p>
+                Ask Codex to explain the current file before giving it a task. That shows you
+                whether the right context is being used.
+              </p>
+            </div>
+            <div>
+              <h3>4. Move to Agent</h3>
+              <p>
+                Once the plan makes sense, switch to Agent for a small edit and review the
+                diff before accepting it.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-section" id="editor-context">
+          <h2>How IDE Context Works</h2>
+          <p>
+            IDE context is the bridge between "answer from general knowledge" and "answer
+            using this project." It can help Codex use the files you have open, the current
+            file, selected code, and explicit file references so your prompt can be shorter
+            and more precise.
+          </p>
+          <p>
+            If the Codex app and IDE extension are synced in the same project, OpenAI says the
+            app can show an IDE context option. With Auto context enabled, Codex tracks files
+            you are viewing so you can ask indirect questions such as "what is this file
+            doing?"
+          </p>
+          <p>
+            For a deeper plain-English explanation of the toggle itself, read
+            <a class="text-link" href="codex-ide-context-button.html">what the IDE context
+            button means in Codex</a>. The short version is that context helps Codex understand
+            your editor state; it is not the same thing as permission to act.
+          </p>
+          <figure class="image-demo image-demo-wide">
+            <img
+              src="assets/codex-context-permissions.png"
+              alt="AI-generated comparison of editor context and permissions"
+              width="1672"
+              height="941"
+              loading="lazy"
+            />
+            <figcaption>
+              AI-generated mockup. Context is about what Codex can use to understand the
+              request; permissions are about what Codex is allowed to do after it understands.
+            </figcaption>
+          </figure>
+          <div class="signal-note">
+            <strong>Simple rule:</strong> context is seeing; permissions are doing. A file can
+            be visible to Codex without giving Codex unlimited permission to edit, run, or use
+            the network.
+          </div>
+          <div class="comparison-table-wrap">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Context source</th>
+                  <th>When it helps</th>
+                  <th>What to say in the prompt</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Open file</td>
+                  <td>You want Codex to explain or change the file currently in front of you.</td>
+                  <td>"Use the current file as context."</td>
+                </tr>
+                <tr>
+                  <td>Selected code</td>
+                  <td>You want a focused explanation, bug fix, or refactor for one block.</td>
+                  <td>"Use the selected code only unless you need surrounding context."</td>
+                </tr>
+                <tr>
+                  <td>@file reference</td>
+                  <td>You know the exact file Codex should inspect, even if it is not open.</td>
+                  <td>"Use @filename as the source of truth."</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="article-section" id="modes">
+          <h2>Chat vs Agent vs Agent Full Access</h2>
+          <p>
+            The mode switcher matters because each mode carries a different level of
+            autonomy. If you are new to Codex, start with the least powerful mode that can
+            still do the job.
+          </p>
+
+          <div class="comparison-table-wrap">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Mode</th>
+                  <th>Best for</th>
+                  <th>What to watch</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Chat</td>
+                  <td>Explaining code, planning changes, comparing approaches, and reviewing before edits.</td>
+                  <td>It is slower for hands-on work, but safer when you are still deciding what should happen.</td>
+                </tr>
+                <tr>
+                  <td>Agent</td>
+                  <td>Focused work inside the current project, such as editing files and running local checks.</td>
+                  <td>OpenAI says Agent can read files, make edits, and run commands in the working directory automatically.</td>
+                </tr>
+                <tr>
+                  <td>Agent Full Access</td>
+                  <td>Trusted tasks that need network access or fewer approval interruptions.</td>
+                  <td>Use caution. OpenAI describes it as allowing file reads, edits, commands, and network access without approval.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            My practical advice: use Chat to shape the job, Agent to do the job, and Agent
+            Full Access only when the repo, the task, and the commands are all familiar enough
+            that you would be comfortable doing them yourself.
+          </p>
+          <div class="signal-note">
+            <strong>Decision rule:</strong> if you would not run the command yourself without
+            checking it first, do not give Codex Full Access for that step.
+          </div>
+        </section>
+
+        <section class="article-section" id="safe-workflow">
+          <h2>A Safe First Workflow</h2>
+          <p>
+            You do not need an advanced setup to get value from Codex. The first workflow to
+            learn is a small loop: give the right context, ask for a focused change, then
+            review the output before accepting it.
+          </p>
+          <figure class="image-demo image-demo-wide">
+            <img
+              src="assets/codex-safe-workflow.png"
+              alt="AI-generated mockup of a three step Codex workflow: context, prompt, review"
+              width="1672"
+              height="941"
+              loading="lazy"
+            />
+            <figcaption>
+              AI-generated mockup. A good beginner loop is context first, prompt second,
+              review third.
+            </figcaption>
+          </figure>
+          <div class="mistake-grid">
+            <div>
+              <h3>1. Open the Right File</h3>
+              <p>
+                Start with the file you actually want to discuss. Close unrelated tabs if
+                they could distract the task.
+              </p>
+            </div>
+            <div>
+              <h3>2. Ask in Chat First</h3>
+              <p>
+                Before editing, ask Codex to explain the file, risks, and likely change path.
+              </p>
+            </div>
+            <div>
+              <h3>3. Switch to Agent</h3>
+              <p>
+                Ask for one focused change. Keep the instruction narrow and name the success
+                check you expect.
+              </p>
+            </div>
+            <div>
+              <h3>4. Review the Diff</h3>
+              <p>
+                Read the changed code, run a check if possible, and ask Codex to explain any
+                part that feels surprising.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-section" id="prompts">
+          <h2>Prompts That Work Well</h2>
+          <p>
+            Codex works better when you give it the task, the boundary, and the check. These
+            prompts are intentionally plain. They tell Codex what to do without turning the
+            request into a novel.
+          </p>
+
+          <div class="example-list">
+            <article>
+              <h3>Understand the Current File</h3>
+              <p>
+                "Use IDE context. Explain what this file is responsible for, what imports
+                matter, and what I should be careful about before changing it."
+              </p>
+            </article>
+            <article>
+              <h3>Plan Before Editing</h3>
+              <p>
+                "Stay in Chat mode for now. Plan the smallest safe change for [goal]. Tell me
+                which files you would inspect before editing."
+              </p>
+            </article>
+            <article>
+              <h3>Make a Focused Change</h3>
+              <p>
+                "Use Agent mode. Change only the files required for [goal]. Keep behavior the
+                same except for [specific change], then tell me what you checked."
+              </p>
+            </article>
+            <article>
+              <h3>Review a Diff</h3>
+              <p>
+                "Review the current diff for bugs, accidental behavior changes, and missing
+                edge cases. Give findings first, then a short summary."
+              </p>
+            </article>
+            <article>
+              <h3>Run Tests Carefully</h3>
+              <p>
+                "Run the smallest relevant test or check for this change. If a command might
+                be slow, destructive, or network-dependent, explain before running it."
+              </p>
+            </article>
+            <article>
+              <h3>Use Full Access Deliberately</h3>
+              <p>
+                "Before I switch to Agent Full Access, list exactly why this task needs it,
+                what commands you expect to run, and what risk I should understand."
+              </p>
+            </article>
+          </div>
+
+          <div class="comparison-table-wrap">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Weak prompt</th>
+                  <th>Better Codex prompt</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>"Fix this."</td>
+                  <td>"Use IDE context. Find the smallest safe fix for this error. Explain the cause first, then change only the files required."</td>
+                </tr>
+                <tr>
+                  <td>"Make this cleaner."</td>
+                  <td>"Refactor the selected function for readability without changing behavior. Keep the public API the same and tell me what you checked."</td>
+                </tr>
+                <tr>
+                  <td>"Build the feature."</td>
+                  <td>"Plan the feature in Chat first. List the files you need to inspect, the smallest implementation path, and the test I should run before editing."</td>
+                </tr>
+                <tr>
+                  <td>"Run everything."</td>
+                  <td>"Run the smallest relevant check for this change. If the command needs the network, changes files, or may take a long time, ask first."</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="article-section" id="first-session">
+          <h2>Copy This First Codex Session</h2>
+          <p>
+            If you are using Codex for the first time, run this as a three-message session.
+            It gives you the benefits of context and Agent mode without jumping straight into
+            a risky broad edit.
+          </p>
+          <div class="prompt-recipe">
+            <h3>Message 1: Understand</h3>
+            <p>
+              Use IDE context. Explain the current file in plain English. What is it
+              responsible for, what does it depend on, and what should I be careful about
+              before editing it?
+            </p>
+          </div>
+          <div class="prompt-recipe">
+            <h3>Message 2: Plan</h3>
+            <p>
+              Stay in Chat mode. Plan the smallest safe change for [describe your goal].
+              Name the files you would inspect and tell me what check would prove the change
+              worked.
+            </p>
+          </div>
+          <div class="prompt-recipe">
+            <h3>Message 3: Edit</h3>
+            <p>
+              Switch to Agent mode. Make only the planned change. Do not refactor unrelated
+              code. After editing, summarize the diff and tell me the exact check you ran or
+              recommend.
+            </p>
+          </div>
+        </section>
+
+        <section class="article-section" id="troubleshooting">
+          <h2>Troubleshooting</h2>
+          <div class="mistake-grid">
+            <div>
+              <h3>Codex Talks About the Wrong File</h3>
+              <p>
+                Open the correct file, name it in the prompt, and remove unrelated editor
+                context. If needed, use an explicit file reference.
+              </p>
+            </div>
+            <div>
+              <h3>Codex Wants Too Much Access</h3>
+              <p>
+                Keep the task in Chat or normal Agent mode and ask it to explain which action
+                actually needs extra permission.
+              </p>
+            </div>
+            <div>
+              <h3>The Change Is Too Big</h3>
+              <p>
+                Stop and ask for a smaller plan. A good instruction is: "Make the smallest
+                change that solves this, and do not refactor unrelated code."
+              </p>
+            </div>
+            <div>
+              <h3>You Do Not Trust the Output Yet</h3>
+              <p>
+                Ask Codex to explain the diff line by line, then run a focused check. If the
+                explanation is vague, do not accept the change blindly.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-section">
+          <h2>What I Would Use Most Often</h2>
+          <p>
+            For everyday coding, I would live mostly in two modes: Chat for thinking, Agent
+            for small edits. That gives you the real benefit of Codex without letting every
+            question become an uncontrolled code change.
+          </p>
+          <p>
+            Full Access has its place, but it should feel like a deliberate decision. Use it
+            when the task genuinely needs fewer prompts or network access, not just because it
+            sounds more powerful.
+          </p>
+          <div class="mistake-grid">
+            <div>
+              <h3>Use Chat When</h3>
+              <p>You are exploring, learning a file, comparing approaches, or checking risk.</p>
+            </div>
+            <div>
+              <h3>Use Agent When</h3>
+              <p>You know the change you want and can review the diff afterward.</p>
+            </div>
+            <div>
+              <h3>Use Full Access When</h3>
+              <p>The task is trusted, scoped, and genuinely needs network access or fewer prompts.</p>
+            </div>
+            <div>
+              <h3>Pause When</h3>
+              <p>The task touches secrets, payments, production data, or commands you do not understand.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-section" id="faq">
+          <h2>FAQ</h2>
+          <div class="faq-list">
+            <details>
+              <summary>Does Codex only work in VS Code?</summary>
+              <p>
+                No. OpenAI's Codex IDE docs say the extension works with VS Code forks like
+                Cursor and Windsurf, and that Codex IDE integrations are available for
+                VS Code-compatible editors and JetBrains IDEs.
+              </p>
+            </details>
+            <details>
+              <summary>What does Include IDE context mean in Codex?</summary>
+              <p>
+                It means Codex can use relevant editor context, such as the current file,
+                open files, selected code, or explicit file references, to answer with more
+                awareness of your project.
+              </p>
+            </details>
+            <details>
+              <summary>Is IDE context the same as Full Access?</summary>
+              <p>
+                No. IDE context helps Codex understand your current files. Full Access changes
+                how much Codex can do without approval, including commands and network access.
+              </p>
+            </details>
+            <details>
+              <summary>Can Codex change files automatically in Agent mode?</summary>
+              <p>
+                Yes, for normal work inside the current project. That is why the best habit is
+                to ask for a small change, review the diff, and run a focused check before
+                accepting the result.
+              </p>
+            </details>
+            <details>
+              <summary>Should beginners use Agent Full Access?</summary>
+              <p>
+                Usually not at first. Learn Chat and Agent mode first, then use Full Access
+                only for trusted projects and tasks where the extra autonomy is clearly needed.
+              </p>
+            </details>
+            <details>
+              <summary>What is the best first Codex prompt?</summary>
+              <p>
+                Try this: "Use IDE context. Explain the current file, what it depends on, and
+                the safest way to make a small change." It teaches you how much context Codex
+                can see before you ask it to edit anything.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <section class="article-card sources-card" aria-labelledby="sources">
+          <h2 id="sources">Sources Checked</h2>
+          <p>
+            This guide was written from first-hand Codex use and checked against current
+            official OpenAI documentation on 24 April 2026.
+          </p>
+          <ul>
+            <li><a href="https://developers.openai.com/codex/ide">OpenAI Codex IDE extension overview</a></li>
+            <li><a href="https://developers.openai.com/codex/ide/features">OpenAI Codex IDE features: editor context, modes, and cloud tasks</a></li>
+            <li><a href="https://developers.openai.com/codex/app/features">OpenAI Codex app features: IDE sync and Auto context</a></li>
+            <li><a href="https://developers.openai.com/codex/agent-approvals-security">OpenAI Codex agent approvals and security</a></li>
+          </ul>
+        </section>
+
+        <section class="article-card sources-card" aria-labelledby="read-next">
+          <h2 id="read-next">Read Next</h2>
+          <ul>
+            <li><a href="codex-ide-context-button.html">What Is the IDE Context Button in Codex?</a></li>
+            <li><a href="how-ai-workflows-work.html">How AI Workflows Work</a></li>
+            <li><a href="how-to-use-chatgpt-for-beginners.html">How to Use ChatGPT for Beginners</a></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#posts">Posts</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+      <p>
+        Novera is an independent learning blog and is not affiliated with OpenAI.
+        ChatGPT, Codex, and OpenAI names are used only to identify the tools being discussed.
+      </p>
+    </footer>
+    <script src="theme.js"></script>
+  </body>
+</html>

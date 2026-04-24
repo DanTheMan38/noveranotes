@@ -25,6 +25,7 @@ button {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 104px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -404,6 +405,8 @@ html[data-theme="dark"] .context-button-figure,
 html[data-theme="dark"] .formula-grid div,
 html[data-theme="dark"] .mistake-grid div,
 html[data-theme="dark"] .example-list article,
+html[data-theme="dark"] .simple-version-grid div,
+html[data-theme="dark"] .glossary-grid div,
 html[data-theme="dark"] .faq-list details {
   border-color: rgba(226, 232, 240, 0.14);
   background:
@@ -572,6 +575,17 @@ html[data-theme="dark"] .screenshot-figure figcaption,
 html[data-theme="dark"] .answer-quality-figure figcaption,
 html[data-theme="dark"] .faq-list summary {
   color: #e7edf8;
+}
+
+html[data-theme="dark"] .simple-version {
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(10, 31, 36, 0.88)),
+    linear-gradient(120deg, rgba(49, 213, 198, 0.11), rgba(255, 211, 122, 0.08));
+}
+
+html[data-theme="dark"] .simple-version-grid p,
+html[data-theme="dark"] .glossary-grid p {
+  color: #cbd5e1;
 }
 
 html[data-theme="dark"] .muted-box {
@@ -1197,6 +1211,10 @@ h1 {
   gap: 24px;
 }
 
+.article [id] {
+  scroll-margin-top: 104px;
+}
+
 .article-hero {
   max-width: 920px;
   padding-bottom: 18px;
@@ -1770,7 +1788,9 @@ html[data-theme="dark"] .prompt-recipe p {
 
 .formula-grid,
 .mistake-grid,
-.example-list {
+.example-list,
+.simple-version-grid,
+.glossary-grid {
   display: grid;
   gap: 14px;
 }
@@ -1787,12 +1807,54 @@ html[data-theme="dark"] .prompt-recipe p {
 
 .formula-grid div,
 .mistake-grid div,
-.example-list article {
+.example-list article,
+.simple-version-grid div,
+.glossary-grid div {
   min-width: 0;
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(248, 251, 255, 0.72);
+}
+
+.simple-version {
+  background:
+    linear-gradient(135deg, #ffffff 0%, #f1fbfa 58%, #fff7e8 100%),
+    #ffffff;
+}
+
+.simple-version-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.glossary-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 20px;
+}
+
+.simple-version-grid span {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background: rgba(29, 185, 171, 0.14);
+  color: #0a9289;
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.88rem;
+  font-weight: 900;
+}
+
+.simple-version-grid h3,
+.glossary-grid h3 {
+  margin: 0 0 8px;
+}
+
+.simple-version-grid p,
+.glossary-grid p {
+  margin-bottom: 0;
 }
 
 .formula-grid span {
@@ -2457,6 +2519,8 @@ html[data-theme="dark"] .workflow-preview .preview-car-cab {
   .formula-grid,
   .mistake-grid,
   .example-list,
+  .simple-version-grid,
+  .glossary-grid,
   .image-demo-grid {
     grid-template-columns: 1fr;
   }
